@@ -11,20 +11,10 @@ body {
   left: 0.5%;
   right: 0.5%;
   width: 99%;
-  min-width: 42em;
-  max-width: 70em;
   font-size: 95%;
-  line-height: 1.5;
   text-align: justify;
   padding: 0;
   margin: 0 auto;
-  /* fallback for IE8 which doesn't support multiple backgrounds */
-  background: url(../pictures/background-top-left.png) no-repeat top left;
-  background-color: rgb(245, 252, 242);
-  background-image: url(../pictures/background-top-right.png),
-    url(../pictures/background-top-left.png);
-  background-position: top right, top left;
-  background-repeat: no-repeat, no-repeat;
 }
 
 hr {
@@ -73,10 +63,7 @@ div#tocframe {
   top: 0;
   left: 0;
   right: 0;
-  background: rgb(35, 155, 80);
-  background: linear-gradient(to top,
-    rgb(25, 115, 50),
-    rgb(45, 205, 115));
+  background: rgb(0, 110, 220);
   max-width: 70em;
   font-size: 100%;
   line-height: 1;
@@ -157,18 +144,12 @@ div#tocframe {
 }
 
 #tocframe li a:hover {
-  background: rgb(45, 165, 90);
-  background: linear-gradient(to top,
-    rgb(35, 125, 60),
-    rgb(55, 215, 125));
+  background: rgb(110, 190, 230);
 }
 
 #tocframe li.toc_current a,
 #tocframe li.toc_current a:hover {
-  background: rgb(0, 120, 30);
-  background: linear-gradient(to top,
-    rgb(0, 85, 20),
-    rgb(15, 175, 85));
+  background: rgb(110, 110, 220);
   color: #fff;
 }
 
@@ -294,12 +275,13 @@ div#main {
 }
 
 div#pageHeader {
-  width: 100%;
+  display: inline-block;
   height: 10em;
   padding-top: 2em;
-  border: solid #ddd;
-  border-width: 0;
+  border: solid #ddd 0.2em;
   margin: 0 0 1.4em 0;
+  padding-right: 1em;
+  background-color: #aaddff;
 }
 
 #pageHeader .heading {
@@ -307,6 +289,7 @@ div#pageHeader {
   text-align: left;
   padding: 0;
   margin: 0 0 0 340px;
+  color: purple;
 }
 
 #pageHeader p {
@@ -330,9 +313,13 @@ div#cmws {
 }
 
 div#quickSummary {
+  display: inline-block;
   text-align: left;
   margin: 3em 14em 25px 0;
   font-size: 19px;
+  border-radius: 1em;
+  background-color: #aaffdd;
+  border: grey dotted 0.2em;
 }
 
 #quickSummary p {
@@ -355,6 +342,14 @@ div#quickSummary {
 
 .example-image-wrapper img {
   padding: 0em 0em 1em;
+}
+
+#homepage-main .subheading {
+  color: red;
+}
+
+#homepage-main div {
+  background-color: #ccddee;
 }
 
 /* .news-item is styled below with columns */
@@ -380,13 +375,14 @@ div#quickSummary {
 }
 
 #homepage-sidebar {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: fixed;
+  bottom: 3em;
+  right: 1em;
   width: 12em;
   text-align: left;
   /* negate the top-margin of the first .subheading */
   margin-top: -0.5em;
+
 }
 
 #homepage-sidebar .subheading {
@@ -396,12 +392,14 @@ div#quickSummary {
   padding: 0.2em 0.5em 0.1em 0.7em;
   margin: 0.5em 0 0.7em;
   border-radius: 5px;
+  background-color: #aabbcc;
 }
 
 #homepage-sidebar p,
 #pondingsText {
   padding: 0em 0.5em 0.5em;
   margin: 0;
+  background-color: #ccddee;
 }
 
 div#footer {
